@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đếm Phần Tử</title>
+</head>
+<body>
+    <div>Div 1</div>
+    <div>Div 2</div>
+    <div>Div 3</div>
+    <div>Div 4</div>
+
+    <!-- Phần tử để hiển thị số lượng <div> -->
+    <p id="div-count"></p>
+
+    <script>
+        // Bước 1: Tìm tất cả các phần tử <div> trên trang
+        var divs = document.querySelectorAll("div");
+
+        // Bước 2: Đếm số lượng phần tử <div>
+        var count = divs.length;
+
+        // Bước 3: Hiển thị số lượng phần tử <div> trong phần tử có id là "div-count"
+        var display = document.getElementById("div-count");
+        display.textContent = "Số lượng phần tử <div> trên trang: " + count;
+    </script>
+</body>
+</html>

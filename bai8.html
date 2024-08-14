@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo Bảng 3x3 Bằng JavaScript</title>
+</head>
+<body>
+    <div id="table-container"></div>
+
+    <script>
+        function createTable() {
+            // Tạo phần tử bảng
+            var table = document.createElement("table");
+
+            // Tạo 3 hàng, mỗi hàng có 3 ô
+            for (var i = 0; i < 3; i++) {
+                var row = document.createElement("tr");
+
+                for (var j = 0; j < 3; j++) {
+                    var cell = document.createElement("td");
+                    cell.textContent = `Row ${i + 1}, Cell ${j + 1}`;
+                    row.appendChild(cell);
+                }
+                // Thêm hàng vào bảng
+                table.appendChild(row);
+            }
+
+            // Thêm bảng vào phần tử có id là "table-container"
+            var container = document.getElementById("table-container");
+            container.appendChild(table);
+        }
+
+        // Gọi hàm tạo bảng khi trang web tải xong
+        createTable();
+    </script>
+</body>
+</html>

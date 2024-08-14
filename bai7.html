@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Đây là đoạn văn đầu tiên.</p>
+    <p>Đây là đoạn văn thứ hai.</p>
+    <p>Đây là đoạn văn thứ ba.</p>
+
+    <button onclick="updateParagraphs()">Cập nhật tất cả các đoạn văn</button>
+
+    <script>
+        function updateParagraphs() {
+            var paragraphs = document.querySelectorAll("p");
+
+            paragraphs.forEach(function(paragraph) {
+                paragraph.textContent = "Updated paragraph";
+            });
+        }
+    </script>
+</body>
+</html>
